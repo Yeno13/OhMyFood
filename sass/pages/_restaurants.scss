@@ -8,3 +8,66 @@ main {
         max-height: 16em;
     }
 }
+
+.menu {
+    z-index: 1;
+    margin-top: -3em;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 35px 35px 0px 0px;
+    padding-bottom: 4em;
+    &__titre {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 20px;
+        padding: 0.5em 1em;
+        & h2 {
+            margin: 0;
+            padding: 0.5em 0;
+            font-family: 'Shrikhand', cursive;
+        }
+    }
+    &__titre-coeur {
+        padding-right: 10px;
+        font-size: 30px;
+        color: transparent;
+        -webkit-text-stroke: 3px #4c4c4c;
+        &:hover {
+            animation: heart-fill 1s forwards;
+            cursor: pointer;
+        }
+    }
+
+    &__content {
+        margin-bottom: 3em;
+    }
+    & h4 {
+        color: #7b7b7b;
+        font-weight: 400;
+        margin: 0.5em auto;
+        padding-left: 1.5em;
+    }
+
+    .plate {
+        position: relative;
+        width: 95%;
+        height: 5em;
+        margin: 1em auto 1em auto;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        box-shadow: 1px 1px 8px #c2c2c2;
+    }
+    .underline {
+        height: 0.2em;
+        width: 2.5em;
+        background-color: $color-tertiary;
+        margin-left: 1.5em;
+    }
+
+}
+
+

@@ -1,8 +1,9 @@
 * {
     box-sizing: border-box;
 }
-@import "./utils/animations";
+
 @import "./base/variables";
+@import "./utils/animations";
 @import "./layout/header";
 @import "./composants/buttons";
 @import "./layout/main";
