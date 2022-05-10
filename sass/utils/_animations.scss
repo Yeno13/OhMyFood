@@ -1,0 +1,23 @@
+@keyframes apparition-loading {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes disparition-loading {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-1000px);
+        height: 0vw;
+        visibility: hidden;
+    }
+}

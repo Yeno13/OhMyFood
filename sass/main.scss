@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+@import "./utils/animations";
+@import "./base/variables";
+@import "./layout/header";
+@import "./composants/buttons";
+@import "./layout/main";
+@import "./layout/footer";
+@import "./composants/cards";
+@import "./pages/restaurants";
+
+
