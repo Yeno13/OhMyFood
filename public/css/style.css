@@ -37,6 +37,19 @@
     -webkit-text-stroke-width: 0px;
   }
 }
+@keyframes valid-rotation {
+  0% {
+    transform: rotate(0deg);
+    margin: 0;
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  100% {
+    margin: 0.2rem;
+    transform: rotate(360deg);
+  }
+}
 header {
   display: flex;
   align-items: center;
@@ -55,26 +68,6 @@ header a {
   color: #353535;
   position: absolute;
   left: 5%;
-}
-
-.btn {
-  text-align: center;
-  font-size: 16px;
-  width: 14em;
-  border: none;
-  border-radius: 30px;
-  padding: 1em 0;
-  color: white;
-  background: linear-gradient(#ff79da, #9356DC);
-  box-shadow: 4px 4px 4px grey;
-  margin: 1em auto 0 auto;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-}
-.btn:hover {
-  filter: brightness(1.1);
-  box-shadow: 4px 4px 4px rgb(78, 78, 78);
 }
 
 body {
@@ -244,6 +237,26 @@ footer ul li {
   margin: 0.7em 0;
 }
 
+.btn {
+  text-align: center;
+  font-size: 16px;
+  width: 14em;
+  border: none;
+  border-radius: 30px;
+  padding: 1em 0;
+  color: white;
+  background: linear-gradient(#ff79da, #9356DC);
+  box-shadow: 4px 4px 4px grey;
+  margin: 1em auto 0 auto;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 4px 4px 4px rgb(78, 78, 78);
+}
+
 main {
   font-family: "Roboto" sans-serif;
 }
@@ -270,7 +283,7 @@ main .menu-img {
   font-size: 20px;
   padding: 0.5em 1em;
 }
-.menu__titre h2 {
+.menu__titre span {
   margin: 0;
   padding: 0.5em 0;
   font-family: "Shrikhand", cursive;
@@ -283,7 +296,6 @@ main .menu-img {
 }
 .menu__titre-coeur:hover {
   animation: heart-fill 1s forwards;
-  cursor: pointer;
 }
 .menu__content {
   margin-bottom: 3em;
@@ -293,6 +305,12 @@ main .menu-img {
   font-weight: 400;
   margin: 0.5em auto;
   padding-left: 1.5em;
+}
+.menu .underline {
+  height: 0.2em;
+  width: 2.5em;
+  background-color: #99e2d0;
+  margin-left: 1.5em;
 }
 .menu .plate {
   position: relative;
@@ -305,12 +323,66 @@ main .menu-img {
   align-items: flex-end;
   justify-content: space-around;
   box-shadow: 1px 1px 8px #c2c2c2;
+  animation: apparition 1.5s forwards;
+  opacity: 0;
+  overflow: hidden;
 }
-.menu .underline {
-  height: 0.2em;
-  width: 2.5em;
+.menu .plate__info {
+  width: 100%;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 5px;
+}
+.menu .plate h5, .menu .plate p {
+  margin: 0.8em auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu .plate h5 {
+  font-size: 20px;
+}
+.menu .plate__price {
+  font-weight: 500;
+  color: #353535;
+  padding-bottom: 0.7em;
+  margin: 0 1.5rem 0 0.3rem;
+  transition: 0.4s ease;
+}
+.menu .plate__check {
+  position: absolute;
+  right: 0px;
+  width: 3em;
+  height: 100%;
+  font-size: 28px;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #99e2d0;
-  margin-left: 1.5em;
+  color: white;
+  transform: translate(100%);
+  transition: 0.4s ease;
+}
+.menu .plate:hover .plate__price {
+  padding-right: 6em;
+}
+.menu .plate:hover .plate__check {
+  transform: translate(0%);
+  transition: 0.4s ease;
+}
+.menu .plate:hover .plate__check i {
+  animation: valid-rotation 0.5s both;
+}
+
+.plate:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.plate:nth-child(3) {
+  animation-delay: 0.8s;
 }
 
 /*# sourceMappingURL=style.css.map */

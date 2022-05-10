@@ -39,3 +39,17 @@
     }
 
 }
+
+@keyframes valid-rotation {
+    0% {
+        transform: rotate(0deg);
+        margin: 0;
+    }
+    20%{
+        transform: rotate(0deg);
+    }
+    100% {
+        margin: 0.2rem;
+        transform: rotate(360deg);
+    }
+}
