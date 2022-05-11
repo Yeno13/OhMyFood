@@ -1,0 +1,66 @@
+.restaurants {
+    & a {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 0.5rem 0.5rem #bdbdbd;
+        margin: 1em auto 0 auto;
+        text-decoration: none;
+        color: black;
+        animation: shrink 250ms forwards;
+        &:hover {
+            animation: enlarge 250ms forwards;
+        }
+    }
+    &__card-img {
+        position: relative;
+        text-align: center;
+    }
+    &__new {
+        position: absolute;
+        top: 7%;
+        right: 5%;
+        background-color: $color-tertiary;
+        padding: 0.4em 1.2em;
+        color: darken($color-tertiary,40%);
+        font-weight: 500;
+    }
+    & img {
+        width: 100%;
+        height: 45vw;
+        object-fit: cover;
+        object-position: 50% 60%;
+        border-radius: 20px 20px 0 0;
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 1em 1.7em 2.5em;
+    }
+    &__bottom-info {
+        & h3, & p {
+            margin: 0 0 0.2em -25px;
+        }
+        & h3 {
+            font-size: 20px;
+        }
+        & p {
+            font-size: 18px;
+            font-weight: 300;
+            color: #4c4c4c;
+        }
+    }
+    & .fa-heart {
+        padding-right: 10px;
+        font-size: 30px;
+        color: transparent;
+        -webkit-text-stroke: 3px #4c4c4c;
+        &:hover {
+            animation: heart-fill 2s forwards;
+        }
+    }
+}

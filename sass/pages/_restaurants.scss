@@ -22,7 +22,7 @@ main {
         justify-content: space-between;
         font-size: 20px;
         padding: 0.5em 1em;
-        span {
+        h2 {
             margin: 0;
             padding: 0.5em 0;
             font-family: 'Shrikhand', cursive;
@@ -65,7 +65,7 @@ main {
         align-items: flex-end;
         justify-content: space-around;
         box-shadow: 1px 1px 8px #c2c2c2;
-        animation: apparition 1.5s forwards;
+        animation: showup 1.5s forwards;
         opacity: 0;
         overflow: hidden;
         &__info {
@@ -122,10 +122,12 @@ main {
     }
 }
 .plate:nth-child(2) {
-    animation-delay: 0.4s;
+    animation-delay: 0.5s;
 }
 .plate:nth-child(3){
-    animation-delay: 0.8s
+    animation-delay: 1s
     ;
 }
-
+.plate:nth-child(4){
+    animation-delay: 1.5s;
+}
