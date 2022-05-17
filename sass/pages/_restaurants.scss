@@ -131,3 +131,41 @@ main {
 .plate:nth-child(4){
     animation-delay: 1.5s;
 }
+
+
+@media screen and (min-width: 768px) {
+    .menu-img {
+        position: relative;
+        object-fit: cover;
+    }
+    .menu__titre {
+        position: relative;
+        justify-content: space-between;
+        padding: 0 10em;
+    }    
+    .carte {
+        display: flex;
+        flex-direction: row;
+        & .content {
+            margin: 3em auto;
+            width: 40%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .menu {
+        & h2 {
+            font-size: 22px;
+        }
+        & .plate {
+            &__info {
+                font-size: 12px;
+            }
+            & h5 {
+                font-size: 16px;
+            }
+        }
+    }
+}

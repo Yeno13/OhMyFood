@@ -134,3 +134,25 @@ h2 {
         animation-delay: 0.1s;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .local {
+        gap: 1em;
+    }
+    
+    .steps {
+        & h2 {
+            text-align: center;
+        }
+
+        &__box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        &__step {
+            width: 30%;
+        }
+    }
+}
